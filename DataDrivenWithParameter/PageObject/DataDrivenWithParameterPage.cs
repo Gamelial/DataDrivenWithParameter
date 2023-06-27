@@ -1,5 +1,6 @@
 ﻿using DataDrivenWithParameter.Utilities;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,13 @@ namespace DataDrivenWithParameter.PageObject
         public DataDrivenWithParameterPage()
         {
             driver = Hooks1.driver;
+            //Implicit wait
+            //driver.Manage().Timeouts().ImplicitWait=TimesSpanFromSeconds(30);
+
+            //Fluent wait
+            //DefaultWait<IWebDriver> fluentWait = new DefaultWait<IWebDriver>(driver);
+            //fluentWait.Timeout = TimeSpan.FromSeconds(5);
+           // fluentWait.PollingInterval = TimeSpan.FromSeconds(250);
 
         }
 

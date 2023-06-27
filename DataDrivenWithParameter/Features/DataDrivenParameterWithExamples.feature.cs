@@ -20,22 +20,22 @@ namespace DataDrivenWithParameter.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("DataDrivenWithParameter")]
-    public partial class DataDrivenWithParameterFeature
+    [NUnit.Framework.DescriptionAttribute("DataDrivenParameterWithExamples")]
+    public partial class DataDrivenParameterWithExamplesFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "DataDrivenWithParameter.feature"
+#line 1 "DataDrivenParameterWithExamples.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "DataDrivenWithParameter", "A short summary of the feature", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "DataDrivenParameterWithExamples", "A short summary of the feature", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,14 +74,25 @@ namespace DataDrivenWithParameter.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Valid Registration")]
+        [NUnit.Framework.DescriptionAttribute("Data Driven With Example")]
         [NUnit.Framework.CategoryAttribute("tag1")]
-        public void ValidRegistration()
+        [NUnit.Framework.TestCaseAttribute("Blessing02", "blesing@gmail.com", "blessing08", null)]
+        [NUnit.Framework.TestCaseAttribute("emeka 1", "emeka@gmail.com", "emekao73", null)]
+        [NUnit.Framework.TestCaseAttribute("one", "onw@gmail.com", "one2356", null)]
+        public void DataDrivenWithExample(string username, string email, string password, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "tag1"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Valid Registration", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            argumentsOfScenario.Add("Username", username);
+            argumentsOfScenario.Add("Email", email);
+            argumentsOfScenario.Add("Password", password);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Data Driven With Example", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -92,27 +103,6 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 7
- testRunner.Given("I navigate to \"https://angularjs.realworld.io/#/register\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 8
- testRunner.And("I click on Sign up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 9
- testRunner.And("I enter my Username text \"Learnwithpride67993\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 10
- testRunner.And("I enter my email text \"chugamzsl267@gmail.com\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 11
- testRunner.And("I enter my password text \"Chukwudi7949\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 12
- testRunner.When("I click on the Sign up button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 13
- testRunner.Then("I should be able to register successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
             }
             this.ScenarioCleanup();
         }
